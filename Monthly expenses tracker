@@ -1,1 +1,9 @@
-
+import matplotlib.pyplot as plt import csv
+import os
+List of expense categories categories = [
+"Rent", "Utilities", "Groceries",
+"Transportation","Entertainment", "Healthcare", "Insurance", "Dining Out", "Education",
+"Miscellaneous"
+Initialize dictionary expenses = {category:
+0.0 for category in categories}
+csv_file = "expenses.csv"
