@@ -1,4 +1,5 @@
-import matplotlib.pyplot as plt import csv
+import matplotlib.pyplot as plt
+import csv
 import os
 List of expense categories categories = [
 "Rent", "Utilities", "Groceries",
