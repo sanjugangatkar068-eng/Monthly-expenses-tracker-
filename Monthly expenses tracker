@@ -8,3 +8,11 @@ List of expense categories categories = [
 Initialize dictionary expenses = {category:
 0.0 for category in categories}
 csv_file = "expenses.csv"
+def load_expenses():
+if os.path.exists(csv_file):
+with open(csv_file, mode='r') as file:
+reader = csv.reader(file)
+for row in reader:
+category, amount = row
+if category in expenses:
+expenses[category] = float(amount)
