@@ -16,3 +16,9 @@ for row in reader:
 category, amount = row
 if category in expenses:
 expenses[category] = float(amount)
+def save_expenses():
+with open(csv_file, mode='w', newline='') as file:
+writer = csv.writer(file)
+for category, amount in expenses.items():
+writer.writerow([category, amount])
+
