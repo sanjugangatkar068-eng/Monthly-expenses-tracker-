@@ -21,4 +21,17 @@ with open(csv_file, mode='w', newline='') as file:
 writer = csv.writer(file)
 for category, amount in expenses.items():
 writer.writerow([category, amount])
-
+def add_expense():
+print("\nAdd Expense:")
+for i, category in enumerate(categories, 1):
+print(f"{i}. {category}")
+try:
+choice = int(input("Select category number (1-10): "))
+if 1 <= choice <= 10:
+amount = float(input(f"Enter amount for {categories[choice - 1]}: "))
+expenses[categories[choice - 1]] += amount
+save_expenses()  # Save after adding
+else:
+print("Invalid category selection!")
+except ValueError:
+print("Please enter valid numbers.")
