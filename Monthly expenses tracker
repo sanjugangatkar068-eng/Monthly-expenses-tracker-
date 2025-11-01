@@ -40,3 +40,9 @@ else:
 print("Invalid category selection!")
 except ValueError:
 print("Please enter valid numbers.")
+def show_expenses():
+print("\nCurrent Monthly Expenses:")
+for category, amount in expenses.items():
+print(f"{category}: ₹{amount:.2f}")
+print(f"\nTotal Monthly Expense: ₹{sum(expenses.values()):.2f}")
+
