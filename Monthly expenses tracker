@@ -45,4 +45,9 @@ print("\nCurrent Monthly Expenses:")
 for category, amount in expenses.items():
 print(f"{category}: ₹{amount:.2f}")
 print(f"\nTotal Monthly Expense: ₹{sum(expenses.values()):.2f}")
+def plot_expenses():
+non_zero_expenses = {k: v for k, v in expenses.items() if v > 0}
+if not non_zero_expenses:
+print("\nNo expenses to display in the chart!")
+return
 
