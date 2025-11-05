@@ -50,4 +50,12 @@ non_zero_expenses = {k: v for k, v in expenses.items() if v > 0}
 if not non_zero_expenses:
 print("\nNo expenses to display in the chart!")
 return
+labels = non_zero_expenses.keys()  
+sizes = non_zero_expenses.values()  
+
+plt.figure(figsize=(8, 6))  
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)  
+plt.title("Monthly Expense Distribution")  
+plt.axis('equal')  
+plt.show()
 
