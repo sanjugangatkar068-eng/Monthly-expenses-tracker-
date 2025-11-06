@@ -58,4 +58,14 @@ plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
 plt.title("Monthly Expense Distribution")  
 plt.axis('equal')  
 plt.show()
+def main():
+load_expenses()  # Load data at start
+while True:
+print("\nExpense Tracker Menu")
+print("1. Add Expense")
+print("2. Show Expenses")
+print("3. Plot Expense Chart")
+print("4. Exit")
+choice = input("Enter your choice (1-4): ")
+
 
