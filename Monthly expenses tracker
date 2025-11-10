@@ -67,5 +67,15 @@ print("2. Show Expenses")
 print("3. Plot Expense Chart")
 print("4. Exit")
 choice = input("Enter your choice (1-4): ")
-
+if choice == '1':  
+        add_expense()  
+    elif choice == '2':  
+        show_expenses()  
+    elif choice == '3':  
+        plot_expenses()  
+    elif choice == '4':  
+        print("Exiting Expense Tracker. Goodbye!")  
+        break  
+    else:  
+        print("Invalid choice! Please try again.")
 
