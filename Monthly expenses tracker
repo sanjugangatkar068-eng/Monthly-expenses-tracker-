@@ -78,4 +78,5 @@ if choice == '1':
         break  
     else:  
         print("Invalid choice! Please try again.")
-
+if name == "main":
+main()
